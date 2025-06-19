@@ -2,13 +2,7 @@ name: Validate Vendor Registry
 
 on:
   push:
-    paths:
-      - "vendors/**/*.json"
-      - "schema/vendor-entry-schema.json"
   pull_request:
-    paths:
-      - "vendors/**/*.json"
-      - "schema/vendor-entry-schema.json"
 
 jobs:
   validate:
