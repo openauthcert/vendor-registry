@@ -1,0 +1,36 @@
+name: Validate Vendor Registry
+
+on:
+  push:
+    paths:
+      - "vendors/**/*.json"
+      - "schema/vendor-entry-schema.json"
+  pull_request:
+    paths:
+      - "vendors/**/*.json"
+      - "schema/vendor-entry-schema.json"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    name: Validate vendor entries
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install check-jsonschema
+        run: |
+          python -m pip install --upgrade pip
+          pip install check-jsonschema
+
+      - name: Validate each vendor entry
+        run: |
+          for file in vendors/*.json; do
+            echo "Validating $file"
+            check-jsonschema "$file" --schemafile schema/vendor-entry-schema.json
+          done
