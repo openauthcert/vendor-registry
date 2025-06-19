@@ -1,4 +1,4 @@
-[![Validate Vendor Registry](https://github.com/openauthcert/vendor-registry/actions/workflows/validate-vendors.yml/badge.svg?branch=main&event=check_run)](https://github.com/openauthcert/vendor-registry/actions/workflows/validate-vendors.yml)
+[![Validate Vendor Registry](https://github.com/openauthcert/vendor-registry/actions/workflows/validate-vendors.yml/badge.svg?branch=main)](https://github.com/openauthcert/vendor-registry/actions/workflows/validate-vendors.yml)
 
 ![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)
 
