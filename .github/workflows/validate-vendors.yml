@@ -22,9 +22,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install check-jsonschema
 
-      - name: Validate each vendor entry
+      - name: Validate all vendor entries
         run: |
-          for file in vendors/*.json; do
+          find vendors -name '*.json' -print0 | while IFS= read -r -d '' file; do
             echo "Validating $file"
             check-jsonschema "$file" --schemafile schema/vendor-entry-schema.json
           done
