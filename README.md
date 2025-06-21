@@ -85,6 +85,8 @@ To propose a new vendor or project, please:
   lowercase, hyphenated identifier for your project
 - Validate it using the schema in `schema/`
 - Open a pull request
+- Projects must re-apply for certification when a new **major version** is released.
+- Only English language submissions are accepted.
 
 After adding a vendor file you can run `python generate-summary.py` to refresh
 `public/summary.json`.
