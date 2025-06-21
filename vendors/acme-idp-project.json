@@ -11,5 +11,9 @@
     }
   ],
   "self_hosted": true,
-  "notes": "Supports OIDC and LDAP out of the box; no enterprise paywall. Available as Docker and Helm chart."
+  "notes": "Supports OIDC and LDAP out of the box; no enterprise paywall. Available as Docker and Helm chart.",
+  "oidc_support": true,
+  "saml_support": false,
+  "public_docs_url": "https://acme.example.com/docs",
+  "license_type": "Apache-2.0"
 }

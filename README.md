@@ -33,6 +33,19 @@ Each vendor/project entry must:
 - Follow the schema in `schema/vendor-entry-schema.json`
 - Reference at least one valid badge from `badge-spec`
 
+### Fields
+
+- `name` - display name of the vendor or project
+- `website` - main website or documentation URL
+- `repo` - source code repository link
+- `badges` - list of awarded OpenAuthCert badges
+- `self_hosted` - whether the project can be run on your own infrastructure
+- `notes` - freeform notes about the entry
+- `oidc_support` - boolean flag for OpenID Connect support
+- `saml_support` - boolean flag for SAML support
+- `public_docs_url` - link to public documentation
+- `license_type` - software license identifier
+
 ---
 
 ## ✅ Example Entry: `vendors/acme-idp-project.json`
@@ -50,7 +63,11 @@ Each vendor/project entry must:
     }
   ],
   "self_hosted": true,
-  "notes": "Supports OIDC and LDAP in all editions; documentation and Docker image available."
+  "notes": "Supports OIDC and LDAP in all editions; documentation and Docker image available.",
+  "oidc_support": true,
+  "saml_support": false,
+  "public_docs_url": "https://acme.example.com/docs",
+  "license_type": "Apache-2.0"
 }
 ```
 
@@ -64,9 +81,13 @@ This repository is licensed under [CC BY-SA 4.0](https://creativecommons.org/lic
 ## 🤝 Contributing
 To propose a new vendor or project, please:
 - Fork this repository
-- Add a `.json` file under `vendors/`
+- Add a `<slug>.json` file under `vendors/` where the slug is a short,
+  lowercase, hyphenated identifier for your project
 - Validate it using the schema in `schema/`
 - Open a pull request
+
+After adding a vendor file you can run `python generate-summary.py` to refresh
+`public/summary.json`.
 
 ---
 
