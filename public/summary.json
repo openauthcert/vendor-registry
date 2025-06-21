@@ -1,0 +1,9 @@
+[
+  {
+    "name": "Acme Identity Hub",
+    "slug": "acme-idp-project",
+    "oidc_support": true,
+    "saml_support": false
+  }
+]
+

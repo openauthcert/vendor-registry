@@ -38,6 +38,24 @@
     },
     "notes": {
       "type": "string"
+    },
+    "oidc_support": {
+      "type": "boolean",
+      "description": "Whether the project implements the OpenID Connect protocol"
+    },
+    "saml_support": {
+      "type": "boolean",
+      "description": "Whether the project implements the SAML protocol"
+    },
+    "public_docs_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL to public documentation"
+    },
+    "license_type": {
+      "type": "string",
+      "description": "Software license of the project"
     }
   }
-}
+ }
+
