@@ -15,5 +15,14 @@
   "oidc_support": true,
   "saml_support": false,
   "public_docs_url": "https://acme.example.com/docs",
-  "license_type": "Apache-2.0"
+  "license_type": "Apache-2.0",
+  "auth": {
+    "oidc": true,
+    "saml": false,
+    "ldap": true
+  },
+  "documentation": "https://example.com/docs/sso",
+  "version": "2.1.0",
+  "status": "certified",
+  "certified_at": "2025-06-18"
 }
